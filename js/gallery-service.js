@@ -1,12 +1,9 @@
 'use strict'
 
-var timeNow = Date.now()
-console.log(timeNow);
-
 const gProjects = [
     {
         id: "minesweeper",
-        name: "Minesweeper",
+        name: "portfolioModal1",
         title: "Sweep The Mines",
         desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
         url: "https://itairotstein.github.io/Minesweeper/",
@@ -77,8 +74,13 @@ const gProjects = [
         labels: ["numbers", "games"],
     },
 ]
+
 function getProjects() {
     return gProjects
+}
+
+function getProjectById(projectId) {
+    return gProjects.find(project => project.id === projectId)
 }
 
 
